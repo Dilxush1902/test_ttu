@@ -1,0 +1,105 @@
+.root {
+  width: 100%;
+  // margin-left: 68px;
+  padding-top: 50px;
+  padding-bottom: 64px;
+  .swiperButton {
+    .swiperButtons {
+      .swiper_button_prev {
+        cursor: pointer;
+        position: absolute;
+        padding: 27px 5px;
+        bottom: 40%;
+        left: 5px;
+        z-index: 999;
+        background: #ffffff;
+        border: 1px solid #ebebeb;
+      }
+      .swiper_button_next {
+        cursor: pointer;
+        padding: 27px 5px;
+        background: blue;
+        position: absolute;
+        bottom: 40%;
+        right: 5px;
+        z-index: 999;
+        background: #ffffff;
+        border: 1px solid #ebebeb;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .root {
+    position: relative;
+    padding: 10px;
+    padding-top: 0;
+    border: 1px solid #ebebeb;
+    border-top: none;
+
+    width: 100%;
+    margin-left: 0px;
+    .crosshair_bottom_right {
+      background: rgba(0, 0, 0, 0.16);
+      position: absolute;
+      right: 8px;
+      top: -4px;
+      height: 9px;
+      width: 1px;
+      z-index: 10;
+    }
+    .crosshair_bottom_right::before {
+      content: "";
+      position: absolute;
+      background: rgba(0, 0, 0, 0.16);
+      height: 1px;
+      width: 8px;
+      left: -4px;
+      bottom: 5px;
+    }
+    .crosshair_bottom_left {
+      background: rgba(0, 0, 0, 0.16);
+      position: absolute;
+      left: 9px;
+      top: -5px;
+      height: 10px;
+      width: 1px;
+      z-index: 10;
+    }
+    .crosshair_bottom_left::before {
+      content: "";
+      position: absolute;
+      background: rgba(0, 0, 0, 0.16);
+      height: 1px;
+      width: 8px;
+      left: -4px;
+      bottom: 5px;
+    }
+    // .swiperButton {
+    //   .swiperButtons {
+    //     .swiper_button_prev {
+    //       cursor: pointer;
+    //       position: absolute;
+    //       padding: 37px 10px;
+    //       bottom: 30%;
+    //       left: -20px;
+    //       z-index: 999;
+    //       background: #ffffff;
+    //       border: 1px solid #ebebeb;
+    //     }
+    //     .swiper_button_next {
+    //       cursor: pointer;
+    //       padding: 37px 10px;
+    //       background: blue;
+    //       position: absolute;
+    //       bottom: 30%;
+    //       right: -20px;
+    //       z-index: 999;
+    //       background: #ffffff;
+    //       border: 1px solid #ebebeb;
+    //     }
+    //   }
+    // }
+  }
+}

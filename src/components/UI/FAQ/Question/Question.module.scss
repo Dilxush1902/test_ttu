@@ -1,0 +1,53 @@
+.faq {
+  .accordion {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+    border-top: none;
+  }
+}
+@media (max-width: 600px) {
+  .faq {
+    .accordion {
+      // border-top: none;
+      border-bottom: none;
+      position: relative;
+      border: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.16);
+      .crosshair_bottom_right {
+        background: rgba(0, 0, 0, 0.16);
+        position: absolute;
+        right: -1px;
+        top: -4px;
+        height: 9px;
+        width: 1px;
+        z-index: 10;
+      }
+      .crosshair_bottom_right::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.16);
+        height: 1px;
+        width: 8px;
+        left: -4px;
+        bottom: 5px;
+      }
+      .crosshair_bottom_left {
+        background: rgba(0, 0, 0, 0.16);
+        position: absolute;
+        left: -1px;
+        top: -5px;
+        height: 10px;
+        width: 1px;
+        z-index: 10;
+      }
+      .crosshair_bottom_left::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.16);
+        height: 1px;
+        width: 8px;
+        left: -4px;
+        bottom: 5px;
+      }
+    }
+  }
+}

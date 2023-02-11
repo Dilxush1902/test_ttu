@@ -1,0 +1,94 @@
+@import "unit";
+@import "../../public/fonts/font.css";
+
+:root {
+  --primary-color: #51267d;
+  --secondary-color: #fdc100;
+  --text-color: #696969;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins" !important;
+}
+html,
+body {
+  font-family: "Poppins";
+  font-weight: 400;
+  // background-color: #202020;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.crosshairs {
+  &::before,
+  &::after {
+    background: #fff !important;
+  }
+}
+
+#accordion {
+  width: 100% !important;
+}
+
+.swiper {
+  // height: 100vh;
+  width: 100%;
+  height: 390px;
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      background: #e3591e;
+      border-radius: 0;
+    }
+    // bottom: -1px !important;
+  }
+  .swiper-slide {
+    // text-align: center;
+    // font-size: 18px;
+    // background: #fff;
+    /* Center slide text vertically */
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // display: -webkit-flex;
+    // display: flex;
+    // -webkit-box-pack: center;
+    // -ms-flex-pack: center;
+    // -webkit-justify-content: center;
+    // justify-content: center;
+    // -webkit-box-align: center;
+    // -ms-flex-align: center;
+    // -webkit-align-items: center;
+    // align-items: center;
+  }
+
+  // .swiper-slide img {
+  //   display: block;
+
+  //   width: 399.67px;
+  //   // height: 364.84px;
+  //   object-fit: cover;
+  //   @media (max-width: 600px) {
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+  // }
+}
+
+@media (max-width: 600px) {
+  #map {
+    // margin-top: 32px;
+    width: 100%;
+    // padding: 0 20px;
+    iframe {
+      width: 100%;
+    }
+  }
+}

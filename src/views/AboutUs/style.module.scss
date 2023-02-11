@@ -1,0 +1,45 @@
+.root {
+  position: relative;
+  background: white !important;
+  .navbar {
+    background: white;
+    position: relative;
+    .sticky {
+      width: 100%;
+      display: block;
+      position: fixed;
+      top: 0;
+      z-index: 99;
+      transition: 1s;
+      transition-timing-function: ease-in;
+    }
+
+    .nav {
+      display: none;
+      position: sticky;
+    }
+    .button {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .root {
+    .navbar {
+      .button {
+        border-top: 1px solid #ebebeb;
+        background: #ffffff;
+        display: block;
+        padding: 8px 16px 8px 16px;
+        z-index: 99;
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        .btn {
+          // width: 95%;
+        }
+      }
+    }
+  }
+}

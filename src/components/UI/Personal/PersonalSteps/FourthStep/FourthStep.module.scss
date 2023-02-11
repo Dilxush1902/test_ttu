@@ -1,0 +1,72 @@
+.root {
+  background: white !important;
+  .container {
+    padding: 0;
+    .header {
+      padding-left: 16px;
+      .title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        color: #1b1b1b;
+      }
+    }
+    .downloadDoc {
+      // padding-left: 16px;
+      margin-top: 35px;
+      .download {
+        display: flex;
+        align-items: center;
+        padding: 38px 0;
+        border-bottom: 1px solid #ebebeb;
+        padding-left: 16px;
+        cursor: pointer;
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+        .content {
+          color: #e25b26;
+          margin-left: 7px;
+          &:hover {
+            color: red;
+          }
+        }
+      }
+      .download:nth-child(2) {
+        padding: 36.5px 0;
+        padding-left: 16px;
+      }
+    }
+  }
+}
+.disabled {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .root {
+    .container {
+      max-width: 92%;
+
+      padding: 0 10px;
+      .header {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 22px;
+        border: 1px solid #ebebeb;
+        .title {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+    .downloadDoc {
+      border: 1px solid #ebebeb;
+      margin-top: 0 !important;
+      border-top: none;
+    }
+  }
+}

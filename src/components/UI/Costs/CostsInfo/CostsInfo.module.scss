@@ -1,0 +1,143 @@
+@import "styles/unit.scss";
+
+.root {
+  position: relative;
+  // margin: 0 65px;
+  .container {
+    border: 1px solid #ebebeb;
+    max-width: 90%;
+    padding: 0;
+    .eduContent {
+      display: flex;
+      padding-bottom: 50px;
+      .edu {
+        padding: 0;
+        background-color: #e3591e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        .eduTitle {
+          margin: 0;
+          color: white;
+          font-weight: 600;
+          font-size: 28px;
+          line-height: 42px;
+          // padding: 215px 63px;
+        }
+      }
+      .eduInfo {
+        padding: 24px 32px;
+        background: white;
+        font-size: 16px;
+        line-height: 26px;
+        color: #2c2c2c;
+        border-bottom: 1px solid #ebebeb;
+        .infoTitle {
+          color: #2c2c2c;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 26px;
+        }
+        ul {
+          li {
+            font-size: 16px;
+            line-height: 36px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .root {
+    position: relative;
+    border: 1px solid #ebebeb;
+    margin: 0 8px;
+    padding-bottom: 16px;
+    max-width: 90%;
+    margin-left: 5%;
+    @media (max-width: 600px) {
+      margin-left: 10px;
+      max-width: 100%;
+    }
+    .container {
+      max-width: 100%;
+
+      padding: 0;
+      border: none;
+      .crosshair_bottom_right {
+        background: rgba(0, 0, 0, 0.16);
+        position: absolute;
+        right: -1.5px;
+        top: -5.5px;
+        height: 9px;
+        width: 1px;
+        z-index: 10;
+      }
+      .crosshair_bottom_right::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.16);
+        height: 1px;
+        width: 8px;
+        left: -4px;
+        bottom: 4px;
+      }
+      .crosshair_bottom_left {
+        background: rgba(0, 0, 0, 0.16);
+        position: absolute;
+        left: -1.5px;
+        top: -4.5px;
+        height: 10px;
+        width: 1px;
+        z-index: 10;
+      }
+
+      .crosshair_bottom_left::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.16);
+        height: 1px;
+        width: 10px;
+        left: -4.5px;
+        bottom: 5px;
+      }
+      .eduContent {
+        display: inline-block;
+        .edu {
+          width: 100%;
+          padding: 0;
+          background-color: #e3591e;
+          justify-content: flex-start;
+          .eduTitle {
+            margin: 0;
+            color: white;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 24px;
+            padding: 68px 109px 24px 24px;
+          }
+        }
+        .eduInfo {
+          padding: 16px 24px;
+          background: #f9f9f9;
+          font-size: 14px;
+          line-height: 24px;
+          color: #2c2c2c;
+          .infoTitle {
+            color: #2c2c2c;
+            font-weight: 400;
+          }
+          ul {
+            li {
+              font-size: 14px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

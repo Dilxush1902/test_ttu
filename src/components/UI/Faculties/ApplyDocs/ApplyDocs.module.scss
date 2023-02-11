@@ -1,0 +1,139 @@
+.apply {
+  .box {
+    display: flex;
+    padding-bottom: 50px;
+    border: 1px solid #ebebeb;
+
+    .deadline {
+      width: 50%;
+      display: block;
+      border: 1px solid #ebebeb;
+      border-right: none;
+
+      .title {
+        font-weight: 600;
+        color: #2c2c2c;
+        padding: 61px 0;
+        background: #f9f9f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #ebebeb;
+        font-size: 24px;
+        line-height: 38px;
+      }
+      .content {
+        padding: 61px 0;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #202020;
+      }
+    }
+    .docs {
+      width: 50%;
+      border: 1px solid #ebebeb;
+      // border-left: none;
+
+      .title {
+        font-weight: 600;
+        color: #2c2c2c;
+        padding: 61px 0;
+        background: #f9f9f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #ebebeb;
+        font-size: 24px;
+        line-height: 38px;
+      }
+      .docList {
+        display: flex;
+        justify-content: center;
+        padding-left: 31px;
+        .list {
+          margin: 0;
+          padding: 0;
+          font-size: 24px;
+          padding-top: 46px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          list-style: none;
+          .listItem {
+            text-align: left;
+            color: #202020;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 400;
+            span {
+              margin-left: -6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .apply {
+    .box {
+      padding-bottom: 0;
+      display: block;
+      border-top: none;
+      border-bottom: none;
+
+      .deadline {
+        border-top: none;
+        border-left: none;
+        display: flex;
+        width: 100%;
+        .title {
+          padding: 61px 0;
+          width: 50%;
+          font-size: 14px;
+          line-height: 16px;
+          border-bottom: none;
+          border-right: 1px solid #ebebeb;
+        }
+        .content {
+          width: 50%;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+      .docs {
+        border: none;
+        display: flex;
+        width: 100%;
+        .title {
+          padding: 61px 0;
+          width: 50%;
+          font-size: 14px;
+          line-height: 16px;
+          border-bottom: none;
+          border-right: 1px solid #ebebeb;
+          // border-left: 1px solid #ebebeb;
+        }
+        .docList {
+          width: 50%;
+          padding-left: 0;
+          padding: 60px 0;
+          .list {
+            margin-left: 35px;
+            font-size: 14px;
+            padding-top: 0;
+            .listItem {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

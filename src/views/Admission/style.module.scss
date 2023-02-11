@@ -1,0 +1,53 @@
+@import "styles/unit.scss";
+
+.box {
+  background: white !important;
+  width: 100%;
+  .sticky {
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    transition: 1s;
+    transition-timing-function: ease-in;
+  }
+
+  .nav {
+    display: none;
+    position: sticky;
+  }
+  .container {
+    max-width: 93%;
+  }
+  .button {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .box {
+    .container {
+      max-width: 93%;
+      padding: 0 7px;
+      @media (max-width: 600px) {
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 600px) {
+      .button {
+        border-top: 1px solid #ebebeb;
+        background: #ffffff;
+        display: block;
+        padding: 8px 16px 8px 16px;
+        z-index: 99;
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        .btn {
+          // width: 95%;
+        }
+      }
+    }
+  }
+}

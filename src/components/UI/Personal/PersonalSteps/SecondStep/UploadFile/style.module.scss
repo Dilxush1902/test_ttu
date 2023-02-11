@@ -1,0 +1,142 @@
+.uploadImage {
+  padding: 24px;
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px dashed #ebebeb;
+  .diplomImage {
+    position: absolute;
+    top: -7px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8b8b8b;
+    background: white;
+    padding: 0 10px;
+  }
+  .download {
+    display: block;
+    margin-left: 20%;
+    .sizeInfo {
+      text-align: center;
+      display: flex;
+      flex-direction: column-reverse;
+      .content1 {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: #e25b26;
+        margin-top: 16px;
+      }
+      .content2 {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #929292;
+        margin-top: 8px;
+      }
+    }
+  }
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ebebeb;
+    background: #f9f9f9;
+    cursor: pointer;
+    padding: 24px;
+    input {
+      display: none;
+      &:last-child {
+        display: flex;
+        opacity: 0;
+        width: 1px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .newImage {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .uploadImage {
+    width: 100%;
+    display: flex;
+    border: 1px dashed #ebebeb;
+    .diplomImage {
+      position: absolute;
+      top: -7px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #8b8b8b;
+      background: white;
+      padding: 0 10px;
+    }
+
+    .download {
+      margin: 0 !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      .sizeInfo {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        .content1 {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          color: #e25b26;
+          margin-top: 0px;
+          margin-bottom: 8px;
+          font-size: 24px;
+          @media (max-width: 600px) {
+            font-size: 14px;
+          }
+        }
+        .content2 {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: #929292;
+          margin-top: 0px;
+        }
+      }
+    }
+    .icon {
+      border: 1px solid #ebebeb;
+      background: #f9f9f9;
+      cursor: pointer;
+      padding: 0px;
+      width: 200px;
+      height: 200px;
+      input {
+        display: none;
+      }
+      .newImage {
+        width: 200px !important;
+        height: 200px !important;
+        object-fit: cover;
+        width: 36px;
+        height: 36px;
+      }
+      @media (max-width: 600px) {
+        width: 64px;
+        height: 64px;
+        .newImage {
+          object-fit: cover;
+          width: 64px !important;
+          height: 64px !important;
+        }
+      }
+    }
+  }
+}

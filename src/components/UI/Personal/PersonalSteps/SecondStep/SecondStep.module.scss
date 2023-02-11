@@ -1,0 +1,278 @@
+@import "styles/unit.scss";
+
+.root {
+  background: white !important;
+  .container {
+    .header {
+      cursor: pointer;
+
+      .title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        color: #1b1b1b;
+        z-index: 100;
+      }
+
+      .chevronIcon {
+        display: none;
+        z-index: 100;
+      }
+    }
+
+    .form {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+
+      .inputMask {
+        display: flex;
+        justify-content: flex-start;
+        column-gap: 16px;
+        .seria {
+          input {
+            text-transform: uppercase;
+          }
+        }
+        .passportNumber {
+          width: 100%;
+          input {
+          }
+        }
+      }
+
+      .pinfl {
+        width: 100%;
+        position: relative;
+        .hintIcon {
+          position: absolute;
+          top: 33%;
+          right: 2%;
+          .hintSVG {
+            width: 16px;
+            height: 16px;
+          }
+        }
+        input {
+          width: 100%;
+        }
+      }
+
+      .upload {
+        display: flex;
+        column-gap: 16px;
+
+        .uploadImage {
+          padding: 24px;
+          width: 50%;
+          position: relative;
+          display: flex;
+          align-items: center;
+          border: 1px dashed #ebebeb;
+
+          .diplomImage {
+            position: absolute;
+            top: -7px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #8b8b8b;
+            background: white;
+            padding: 0 10px;
+          }
+        }
+
+        .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #ebebeb;
+          background: #f9f9f9;
+          cursor: pointer;
+          padding: 24px 0;
+
+          .newImage {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+          }
+
+          .newImage1 {
+            width: 150px;
+          }
+        }
+
+        .download {
+          display: block;
+          margin-left: 20%;
+
+          // padding: 24px;
+          .sizeInfo {
+            text-align: center;
+            display: flex;
+            flex-direction: column-reverse;
+
+            .content1 {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              color: #e25b26;
+              margin-top: 16px;
+              cursor: pointer;
+              // img {
+              //   padding-left: 8px;
+              // }
+            }
+
+            .content2 {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 16px;
+              color: #929292;
+              margin-top: 8px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .root {
+    .container {
+      padding: 0 10px;
+
+      .header {
+        display: flex;
+        align-items: center;
+        padding: 22px;
+        border: 1px solid #ebebeb;
+
+        .title {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: #1b1b1b;
+        }
+
+        .chevronIcon {
+          display: block;
+        }
+      }
+
+      .form {
+        padding: 22px;
+        border-top: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .inputMask {
+          width: 100%;
+          .seria {
+            width: 100% !important;
+          }
+          input {
+            padding: rem(16) 0 rem(16) rem(10);
+            font-size: 16px;
+            line-height: 23px;
+            width: 100%;
+
+            @media (max-width: 380px) {
+              font-size: 10px;
+            }
+          }
+
+          input:focus {
+            outline: none !important;
+            // border: 1px solid rgba(0, 0, 0, 0.42);
+          }
+
+          input:nth-child(1) {
+            width: 100%;
+          }
+        }
+
+        .pinfl {
+          width: 100%;
+          .hintIcon {
+            right: 3%;
+            .hintSVG {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+
+        .upload {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+          .uploadImage {
+            padding: 17px 16px;
+            margin-top: 16px;
+            width: 100%;
+            .diplomImage {
+              position: absolute;
+              top: -7px;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 14px;
+              color: #8b8b8b;
+              background: white;
+              padding: 0 10px;
+            }
+
+            .icon {
+              border: 1px solid #ebebeb;
+              background: #f9f9f9;
+              padding: 4px;
+              cursor: pointer;
+              padding: 0px;
+
+              .newImage {
+                width: 48px;
+                height: 48px;
+                object-fit: cover;
+              }
+            }
+
+            .sizeInfo {
+              display: flex;
+              flex-direction: column;
+              margin-left: 16px;
+              .content1 {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 18px;
+                color: #202020;
+                margin-bottom: 8px;
+              }
+
+              .content2 {
+                margin-top: 0;
+              }
+            }
+          }
+
+          .download {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 0px !important;
+          }
+        }
+        .button {
+          width: 100%;
+          .btn {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

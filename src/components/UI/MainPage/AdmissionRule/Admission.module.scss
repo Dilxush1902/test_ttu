@@ -1,0 +1,86 @@
+@import "styles/unit.scss";
+
+.admission {
+  .container {
+    max-width: 93.5% !important;
+    .text {
+      display: flex;
+      position: relative;
+      .title {
+        width: 100%;
+        text-align: left;
+        background: #202020;
+        font-weight: 500;
+        font-size: 20px;
+        color: #ffffff;
+        padding: 50px ;
+      }
+      .crosshair_bottom_right {
+        background: rgba(0, 0, 0, 0.16);
+        position: absolute;
+        right: -1px;
+        top: -4px;
+        height: 9px;
+        width: 1px;
+        z-index: 10;
+      }
+      .crosshair_bottom_right::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.16);
+        height: 1px;
+        width: 8px;
+        left: -4px;
+        bottom: 5px;
+      }
+      .crosshair_bottom_left {
+        background: rgba(0, 0, 0, 0.16);
+        position: absolute;
+        left: -1px;
+        top: -5px;
+        height: 10px;
+        width: 1px;
+        z-index: 10;
+      }
+      .crosshair_bottom_left::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.16);
+        height: 1px;
+        width: 8px;
+        left: -4px;
+        bottom: 5px;
+      }
+    }
+    .cardRoot {
+      // ss
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .admission {
+    .container {
+      max-width: 100% !important;
+      padding: 0 10px;
+      .text {
+        position: relative;
+        flex-direction: row-reverse;
+        .title {
+          width: 100%;
+          font-weight: 500;
+          font-size: 20px;
+          padding: 22px;
+          // line-height: 32px;
+          color: #ffffff;
+          // padding: 27px 24px;
+        }
+      }
+      .cardRoot {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

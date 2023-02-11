@@ -1,0 +1,33 @@
+@import "styles/unit.scss";
+.root {
+  .container {
+    max-width: 93.5%;
+    // padding: 0 68px;
+    .content {
+      padding: 59px 32px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 34px;
+      color: #2c2c2c;
+      border: 1px solid #ebebeb;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .root {
+    .container {
+      padding: 0 10px;
+      max-width: 100%;
+
+      .content {
+        padding: 16px 24px;
+        background: #ffffff;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #2c2c2c;
+      }
+    }
+  }
+}

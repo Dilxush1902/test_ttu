@@ -1,0 +1,87 @@
+@import "styles/unit.scss";
+
+.card {
+  // width: 415.67px;
+  padding: 32px;
+  border: 1px solid #ebebeb;
+  position: relative;
+  .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    background: #f9f9f9;
+    border: 1px solid #ebebeb;
+  }
+  .content {
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 38px;
+    color: #202020;
+  }
+}
+
+@media (max-width: 850px) {
+  .card {
+    padding: 16px 24px;
+    border: 1px solid #ebebeb;
+    border-top: none;
+    position: relative;
+    .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      padding: 10px;
+      background: #f9f9f9;
+      border: 1px solid #ebebeb;
+    }
+    .content {
+      margin-top: 12px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: #202020;
+    }
+  }
+  .crosshair_bottom_right {
+    background: rgba(0, 0, 0, 0.16);
+    position: absolute;
+    right: -1px;
+    top: -4px;
+    height: 9px;
+    width: 1px;
+    z-index: 10;
+  }
+  .crosshair_bottom_right::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.16);
+    height: 1px;
+    width: 8px;
+    left: -4px;
+    bottom: 5px;
+  }
+  .crosshair_bottom_left {
+    background: rgba(0, 0, 0, 0.16);
+    position: absolute;
+    left: -1px;
+    top: -5px;
+    height: 10px;
+    width: 1px;
+    z-index: 10;
+  }
+  .crosshair_bottom_left::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.16);
+    height: 1px;
+    width: 8px;
+    left: -4px;
+    bottom: 5px;
+  }
+}

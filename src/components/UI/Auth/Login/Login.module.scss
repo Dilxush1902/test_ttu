@@ -1,0 +1,167 @@
+@import "styles/unit.scss";
+
+.login {
+  width: 421px;
+  background-color: white;
+  margin: 100px auto;
+  padding: 24px 0;
+  padding-top: 30px;
+  .box {
+    position: relative;
+    .closeLoginBtn {
+      position: absolute;
+      top: -15px;
+      right: 22px;
+      cursor: pointer;
+    }
+    .title {
+      margin: 0;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 35px;
+      color: #2c2c2c;
+      font-family: Poppins;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .form {
+      .info {
+        margin-top: rem(20);
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        .inputMask {
+          input {
+            padding: rem(26) 0 rem(26) rem(10);
+            box-sizing: border-box;
+            font-family: "Poppins" !important;
+            font-size: 16px;
+            line-height: 23px;
+            width: 100%;
+          }
+          input:focus {
+            outline: none !important;
+          }
+        }
+      }
+      .button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 24px;
+        .forgetPssword {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-size: rem(14);
+          margin-top: 26px;
+          cursor: pointer;
+        }
+        .text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          align-items: center;
+          color: #e3591e;
+          margin-bottom: rem(22);
+          &:active {
+            color: red;
+          }
+        }
+        .appButton {
+          width: 100% !important;
+          .btn {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .login {
+    height: 96vh;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 50px 0;
+    margin: 0px auto;
+
+    @media (max-width: 600px) {
+      height: 100vh;
+    }
+    // margin: 0;
+    .box {
+      .closeLoginBtn {
+        display: none;
+      }
+      .title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 35px;
+        color: #323232;
+        text-align: left;
+        font-family: Poppins;
+        text-align: center;
+      }
+
+      .form {
+        margin-top: 0;
+        .info {
+          margin-top: rem(20);
+          display: flex;
+          flex-direction: column;
+          row-gap: 20px;
+          .inputMask {
+            input {
+              padding: rem(26) 0 rem(26) rem(10);
+              border: 1px solid #d9d9d9;
+              box-sizing: border-box;
+              font-family: "Poppins" !important;
+              font-size: 16px;
+              line-height: 23px;
+              width: 100%;
+            }
+            input:focus {
+              outline: none !important;
+              border: none; 
+            }
+          }
+        }
+        .button {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 70%;
+          @media (max-width: 600px) {
+            margin-top: 100%;
+          }
+          .forgetPssword {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: rem(14);
+          }
+          .text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e3591e;
+            margin-bottom: rem(22);
+            &:active {
+              color: red;
+            }
+          }
+          .appButton {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

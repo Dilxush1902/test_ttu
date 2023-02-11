@@ -1,0 +1,17 @@
+@import "styles/unit.scss";
+.box {
+  background: white !important;
+  width: 100%;
+  .container {
+    max-width: 93.5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .box {
+    .container {
+      padding: 0 10px;
+      max-width: 100% !important;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "styles/unit.scss";
+
+.inputLabel {
+  border: none !important;
+  width: 100%;
+  .input {
+    &.fullWidth {
+      width: 100%;
+    }
+    &.passportSeria {
+      width: 35%;
+    }
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+.stepLabel {
+  width: 35%;
+}
+
+@media (max-width: 600px) {
+  .inputLabel {
+    border: none !important;
+    border-radius: 0 !important;
+    .input {
+      // padding: rem(16) 0 rem(16) rem(10);
+      // border: 1px solid #d9d9d9;
+      // box-sizing: border-box;
+      // font-family: "Poppins" !important;
+      // font-size: 16px;
+      // line-height: 24px;
+      &.fullWidth {
+        width: 100%;
+      }
+    }
+    .input:focus {
+      border: 1px solid rgba(0, 0, 0, 0.22);
+      transition: 0.2s;
+      transform: translateX(-5px) translateY(-24px);
+    }
+  }
+  .stepLabel {
+    width: 100%;
+  }
+}

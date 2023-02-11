@@ -1,0 +1,135 @@
+@import "styles/unit.scss";
+
+.box {
+  padding: rem(10) rem(24);
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .body {
+    .images {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: rem(10) 0;
+      cursor: pointer;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      .xIcon{
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .list {
+      list-style-type: none;
+      padding: 0;
+      margin-top: rem(26);
+
+      .listItem {
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        padding: 2px 0;
+        color: #2c2c2c;
+        margin-bottom: 12px;
+        margin: 20px 0;
+
+        p {
+          display: block;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        &:hover {
+          color: red,
+        }
+      }
+
+      .item {
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        padding: 2px 0;
+        color: #2c2c2c;
+        margin-bottom: 12px;
+        margin: 20px 0;
+      }
+
+      .listItem:nth-child(3) {
+        border-bottom: none !important;
+        margin-top: -10px;
+      }
+
+      .listItem:nth-child(4) {
+        margin-top: -10px;
+      }
+
+      .listItem:first-child {
+        border-top: none;
+      }
+    }
+
+    .call {
+      display: flex;
+      align-items: center;
+      margin-top: rem(33);
+
+      .number {
+        font-weight: 400;
+      }
+    }
+
+    .location {
+      display: flex;
+      align-items: flex-start;
+      margin-top: rem(16);
+
+      .address {
+        font-weight: 400;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 20px;
+
+    .btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 15px;
+
+      .chatIcon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .box {
+    .body {
+      .list {
+        .listItem {
+          padding: 17px 0;
+          border-bottom: 1px solid #ebebeb;
+          margin: 0;
+        }
+
+        .item {
+          padding: 17px 0;
+          border-bottom: 1px solid #ebebeb;
+          border-top: 1px solid #ebebeb;
+          margin: 0;
+        }
+
+        .listItem:nth-child(4) {
+          border-top: 1px solid #ebebeb;
+        }
+      }
+    }
+  }
+}

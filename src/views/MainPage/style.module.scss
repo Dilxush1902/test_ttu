@@ -1,0 +1,68 @@
+@import "styles/_animation.scss";
+
+.root {
+  background: white !important;
+  position: relative;
+  .banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(0);
+    z-index: 199;
+    overflow-x: hidden;
+    &.hideBanner {
+      z-index: 0;
+      height: 0;
+      transform: translateY(-100vh);
+    }
+  }
+
+  .navbar {
+    position: relative;
+
+    .sticky {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+    }
+
+    .main {
+      display: none;
+    }
+
+    .button {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .navbar {
+      position: relative;
+
+      .sticky {
+        position: none;
+      }
+
+      .main {
+        display: block;
+      }
+
+      .button {
+        border-top: 1px solid #ebebeb;
+        background: #ffffff;
+        display: block;
+        padding: 8px 16px 8px 16px;
+        z-index: 99;
+        width: 100%;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,278 @@
+.box {
+  background: white !important;
+  border-right: 1px solid #ebebeb;
+  border-left: 1px solid #ebebeb;
+  padding-bottom: 50px;
+  display: flex;
+
+  .root {
+    width: 50%;
+
+    .user {
+      border: 1px solid #ebebeb;
+      border-left: none;
+      display: flex;
+      align-items: center;
+
+      .image {
+        position: relative;
+        padding: 26px 29px;
+        border-right: 1px solid #ebebeb;
+
+        img {
+          border-radius: 50%;
+          object-fit: cover;
+          width: 128px;
+          height: 128px;
+          cursor: pointer;
+        }
+
+        .addIcon {
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          bottom: 20%;
+          right: 25%;
+        }
+
+        @media (max-width: 450px) {
+          .addIcon {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            bottom: 5%;
+            right: 25%;
+          }
+        }
+      }
+
+      .name {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .userName {
+          width: 100%;
+          padding-left: 15px;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 40px;
+          color: #202020;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      @media (max-width: 450px) {
+        .name {
+          width: 100%;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .userName {
+            width: 100%;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 40px;
+            color: #202020;
+            padding: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+
+    .steps {
+      .stepList {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border: 1px solid #ebebeb;
+        background: white;
+        border-left: none;
+        // border-right: none;
+        border-top: none;
+        cursor: pointer;
+        padding: 32px 48px;
+        font-weight: 500;
+        font-size: 18px;
+        margin: 0;
+
+        span {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 28px;
+          padding: 4px 11px;
+          background: #f9f9f9;
+          border-radius: 50%;
+        }
+
+        .title {
+          margin-left: 16px;
+        }
+
+        &:hover {
+          background: #f9f9f9;
+
+          transition: 0.5s;
+
+          // color: #e3591e;
+          .icon {
+            visibility: visible;
+          }
+        }
+
+        .icon {
+          visibility: hidden;
+          margin-left: auto;
+        }
+      }
+
+      .stepList:first-child {
+        span {
+          padding: 4px 13px;
+        }
+      }
+
+      .stepList:disabled,
+      .stepList[disabled] {
+        color: #9d9d9d;
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      .logOut {
+        display: flex;
+        // width: 100%;
+        margin-top: 24px;
+        margin-left: 26px;
+        cursor: pointer;
+
+        &:hover {
+          color: red;
+          transition: 0.3s;
+        }
+
+        .logoutIcon {
+          column-gap: 12px;
+          display: flex;
+          align-items: center;
+        }
+
+      }
+
+      @media (max-width: 450px) {
+        .logOut {
+          margin-left: 13px;
+        }
+      }
+    }
+  }
+
+  .stepsStage {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .stepStageMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .box {
+    display: block;
+
+    .root {
+      width: 100%;
+
+      // border-bottom: 1px solid #ebebeb;
+      .user {
+        display: flex;
+        align-items: center;
+        padding: 10 24px;
+        border-right: none !important;
+        border-bottom: 1px solid #ebebeb !important;
+
+        .image {
+          width: 50%;
+          padding: 14px 41px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+
+            @media (max-width: 600px) {
+              width: 88px;
+              height: 88px;
+            }
+          }
+
+          .addIcon {
+            right: 30%;
+          }
+        }
+
+        .name {
+          padding: 5px 24px;
+
+          .userName {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+
+        border-bottom: none;
+      }
+
+      .steps {
+        .stepList {
+          padding: 18px 16px;
+          border-top: none !important;
+          border-right: none;
+          border-bottom: 1px solid #ebebeb;
+
+          // border-bottom: none;
+          cursor: pointer;
+
+          span {
+            padding: 5px 12px;
+            background: #f9f9f9;
+            border-radius: 50%;
+          }
+
+          .title {
+            margin-left: 12px;
+          }
+
+          .icon {
+            visibility: visible;
+            margin-left: auto;
+          }
+        }
+
+        .stepList:first-child {
+          span {
+            padding: 5px 14px;
+          }
+        }
+      }
+    }
+
+    .stepsStage {
+      display: none;
+    }
+  }
+}

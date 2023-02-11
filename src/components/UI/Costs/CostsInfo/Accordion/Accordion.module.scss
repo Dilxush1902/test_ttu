@@ -1,0 +1,325 @@
+@import "styles/unit.scss";
+
+.root {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .accordion {
+    &:nth-child(2) {
+        border-top: 1px solid #e0e0e0;
+    }
+      &:last-child {
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+    .accordionSummary {
+      padding: 12px 80px;
+
+      .accordionItems {
+        display: flex;
+
+        .icon {
+          width: 109px;
+          height: 93px;
+          margin-right: 16px;
+
+          .image {
+            width: 100%;
+            margin-left: -10px;
+          }
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          margin-right: 73px;
+
+          .info {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: #202020;
+          }
+
+          .costs {
+            margin-top: 12px;
+            font-size: 16px;
+            line-height: 18px;
+            color: #e3591e;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .details {
+      background: white;
+
+      .row {
+        display: flex;
+        border-top: 1px solid #ebebeb;
+
+        .rowTitle {
+          width: 50%;
+          display: flex;
+          align-items: center;
+          flex: 1;
+          padding: 42px 190px 42px 80px;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+          color: #202020;
+          margin: 0;
+          border-right: 1px solid #ebebeb;
+        }
+
+        .rowItem1 {
+          width: 25%;
+          padding: 22px 0;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          border-right: 1px solid #ebebeb;
+          position: relative;
+
+          .dayTime {
+            font-size: 18px;
+            line-height: 24px;
+            color: #a3a3a3;
+            margin-bottom: 12px;
+          }
+
+          .twMillion {
+            font-size: 20px;
+            line-height: 28px;
+            color: #202020;
+          }
+
+          .noText {
+            position: absolute;
+            top: 35%;
+            right: 50%;
+            font-size: 30px;
+            color: #a3a3a3;
+          }
+        }
+      }
+
+      .row:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .root {
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .accordion {
+      border: none;
+
+      .accordionSummary {
+        padding: 12px 80px;
+
+        .accordionItems {
+          display: flex;
+
+          .icon {
+            width: 100px;
+            height: 60px;
+            margin-top: 10px;
+            margin-right: 18px;
+
+            .image {
+              width: 100%;
+            }
+          }
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            margin-right: 73px;
+
+            .info {
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              color: #202020;
+            }
+
+            .costs {
+              font-size: 12px;
+              line-height: 16px;
+              color: #e3591e;
+            }
+          }
+        }
+      }
+
+      .details {
+        background: white;
+
+        .row {
+          display: flex;
+          border-top: 1px solid #ebebeb;
+
+          .rowTitle {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            padding: 16px 28px 16px 12px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #202020;
+            margin: 0;
+            border-right: 1px solid #ebebeb;
+            font-weight: 400;
+          }
+
+          .rowItem1 {
+            width: 30%;
+            // padding: 18px 14px 18px 12px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-right: 1px solid #ebebeb;
+            position: relative;
+
+            .dayTime {
+              font-size: 12px;
+              line-height: 14px;
+              color: #a3a3a3;
+              margin-bottom: 4px;
+            }
+
+            .twMillion {
+              font-size: 14px;
+              line-height: 18px;
+              color: #202020;
+            }
+
+            .noText {
+              position: absolute;
+              top: 15%;
+              right: 45%;
+              font-size: 25px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .root {
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .accordion {
+      border: none;
+
+      .accordionSummary {
+        padding: 12px 80px;
+
+        .accordionItems {
+          display: flex;
+
+          .icon {
+            width: 100px;
+            height: 60px;
+            margin-top: 10px;
+            margin-right: 18px;
+
+            .image {
+              width: 100%;
+            }
+          }
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            margin-right: 73px;
+
+            .info {
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              color: #202020;
+            }
+
+            .costs {
+              font-size: 12px;
+              line-height: 16px;
+              color: #e3591e;
+            }
+          }
+        }
+      }
+
+      .details {
+        background: white;
+
+        .row {
+          display: flex;
+          border-top: 1px solid #ebebeb;
+
+          .rowTitle {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            padding: 16px 28px 16px 12px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #202020;
+            margin: 0;
+            border-right: 1px solid #ebebeb;
+            font-weight: 400;
+          }
+
+          .rowItem1 {
+            width: 30%;
+            // padding: 18px 14px 18px 12px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-right: 1px solid #ebebeb;
+            position: relative;
+
+            .dayTime {
+              font-size: 12px;
+              line-height: 14px;
+              color: #a3a3a3;
+              margin-bottom: 4px;
+            }
+
+            .twMillion {
+              font-size: 14px;
+              line-height: 18px;
+              color: #202020;
+            }
+
+            .noText {
+              position: absolute;
+              top: 25%;
+              right: 45%;
+              font-size: 25px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}

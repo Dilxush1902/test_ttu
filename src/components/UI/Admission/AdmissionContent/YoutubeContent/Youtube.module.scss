@@ -1,0 +1,24 @@
+.root {
+  .content {
+    padding: 20px 0 84px 0;
+    iframe {
+      width: 100%;
+      border-style: none;
+      height: 550px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .root {
+    .content {
+      padding: 0;
+      iframe {
+        width: 100%;
+        border-style: none;
+        height: 228px;
+      }
+    }
+  }
+}

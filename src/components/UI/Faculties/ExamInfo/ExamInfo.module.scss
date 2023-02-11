@@ -1,0 +1,111 @@
+@import "styles/unit.scss";
+
+.licence {
+  border-right: 1px solid #ebebeb;
+  .box {
+    display: flex;
+    .text {
+      .title {
+        background: #202020;
+        padding: 119px 44px;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 42px;
+        color: #ffffff;
+      }
+    }
+    .infoList {
+      padding-left: 52px !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      .infoItem {
+        color: #2c2c2c;
+        margin: 14px 0;
+        margin-left: 32px;
+        font-size: 24px;
+        span {
+          margin-left: 6px;
+        }
+      }
+      // .infoItem::marker {
+      //   content: "\2022";
+      //   // display: inline-block;
+      //   // margin-left: 6px;
+      //   width: 3px;
+      //   color: #1b1b1b;
+      // }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .licence {
+    .box {
+      display: block;
+      .text {
+        position: relative;
+        .title {
+          padding: rem(68) 0 rem(24) rem(24);
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 24px;
+          color: #ffffff;
+        }
+        .crosshair_bottom_right {
+          background: rgba(0, 0, 0, 0.16);
+          position: absolute;
+          right: -1px;
+          top: -4px;
+          height: 9px;
+          width: 1px;
+          z-index: 10;
+        }
+        .crosshair_bottom_right::before {
+          content: "";
+          position: absolute;
+          background: rgba(0, 0, 0, 0.16);
+          height: 1px;
+          width: 8px;
+          left: -4px;
+          bottom: 5px;
+        }
+        .crosshair_bottom_left {
+          background: rgba(0, 0, 0, 0.16);
+          position: absolute;
+          left: -1px;
+          top: -5px;
+          height: 10px;
+          width: 1px;
+          z-index: 10;
+        }
+        .crosshair_bottom_left::before {
+          content: "";
+          position: absolute;
+          background: rgba(0, 0, 0, 0.16);
+          height: 1px;
+          width: 8px;
+          left: -4px;
+          bottom: 5px;
+        }
+      }
+      .infoList {
+        padding: 0;
+        margin: 0;
+        padding-right: 24px;
+        display: block;
+        border: 1px solid #ebebeb;
+        border-right: none;
+        .infoItem {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 26px;
+          margin: 16px 0;
+          margin-left: -15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import "styles/unit.scss";
+
+.card {
+  border: 1px solid #ebebeb;
+  border-top: none;
+  .cardContent {
+    display: flex;
+  }
+  .root {
+    padding-top: 64px;
+    .swiperButton {
+      .swiperButtons {
+        .swiper_button_prev {
+          cursor: pointer;
+          position: absolute;
+          padding: 37px 10px;
+          bottom: 30%;
+          left: 10px;
+          z-index: 999;
+          background: #ffffff;
+          border: 1px solid #ebebeb;
+        }
+        .swiper_button_next {
+          cursor: pointer;
+          padding: 37px 10px;
+          background: blue;
+          position: absolute;
+          bottom: 30%;
+          right: 10px;
+          z-index: 999;
+          background: #ffffff;
+          border: 1px solid #ebebeb;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .card {
+    .cardContent {
+      display: block;
+    }
+    .root {
+      position: relative;
+      padding: 0px;
+      padding-top: 0;
+      border: 1px solid #ebebeb;
+      border: none;
+      border-top: none;
+
+      .swiperButton {
+        .swiperButtons {
+          .swiper_button_prev {
+            cursor: pointer;
+            position: absolute;
+            padding: 27px 5px;
+            bottom: 40%;
+            left: 5px;
+            z-index: 999;
+            background: #ffffff;
+            border: 2px solid #ebebeb;
+          }
+          .swiper_button_next {
+            cursor: pointer;
+            padding: 27px 5px;
+            bottom: 40%;
+            position: absolute;
+            right: 5px;
+            z-index: 999;
+            background: #ffffff;
+            border: 2px solid #ebebeb;
+          }
+        }
+      }
+    }
+  }
+}

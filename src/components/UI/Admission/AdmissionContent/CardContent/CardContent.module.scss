@@ -1,0 +1,84 @@
+@import "styles/unit.scss";
+
+.card {
+  border: 1px solid #ebebeb;
+  border-left: none;
+  padding: 32px 32px 44px 32px;
+  width: 33.5%;
+  .number {
+    background: #f9f9f9;
+    border: 1px solid #ebebeb;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      display: block;
+    }
+  }
+  .content {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 38px;
+    color: #2c2c2c;
+  }
+}
+
+@media (max-width: 850px) {
+  .card {
+    padding: 16px 24px;
+    border-top: none;
+    position: relative;
+    border-right: none;
+    width: 100%;
+    .number {
+      width: 24px;
+      height: 24px;
+      padding: 10px;
+    }
+    .content {
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 24px;
+      color: #202020;
+    }
+  }
+  .crosshair_bottom_right {
+    background: rgba(0, 0, 0, 0.16);
+    position: absolute;
+    right: -1px;
+    top: -4px;
+    height: 9px;
+    width: 1px;
+    z-index: 10;
+  }
+  .crosshair_bottom_right::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.16);
+    height: 1px;
+    width: 8px;
+    left: -4px;
+    bottom: 5px;
+  }
+  .crosshair_bottom_left {
+    background: rgba(0, 0, 0, 0.16);
+    position: absolute;
+    left: -1px;
+    top: -5px;
+    height: 10px;
+    width: 1px;
+    z-index: 10;
+  }
+  .crosshair_bottom_left::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.16);
+    height: 1px;
+    width: 8px;
+    left: -4px;
+    bottom: 5px;
+  }
+}

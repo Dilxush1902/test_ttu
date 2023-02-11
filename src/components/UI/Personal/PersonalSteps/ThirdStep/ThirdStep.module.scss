@@ -1,0 +1,49 @@
+@import "styles/unit.scss";
+
+.root {
+  background: white !important;
+  .container {
+    .header {
+      .title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        color: #1b1b1b;
+      }
+    }
+    .examDate {
+      margin-top: 21px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .root {
+    .container {
+      // padding: 0 10px;
+      max-width: 96%;
+      .header {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 22px;
+        border: 1px solid #ebebeb;
+        .title {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: #1b1b1b;
+        }
+      }
+      .examDate {
+        margin-top: 0;
+        padding: 22px;
+        border: 1px solid #ebebeb;
+        border-top: none;
+      }
+    }
+  }
+}

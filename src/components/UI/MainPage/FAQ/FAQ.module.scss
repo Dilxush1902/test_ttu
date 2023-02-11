@@ -1,0 +1,182 @@
+@import "styles/unit.scss";
+
+.faq {
+  .container {
+    max-width: 93.5% !important;
+    // border-bottom: 1px solid #ccc;
+    // padding: 0 82px;
+
+    .text {
+      position: relative;
+      display: flex;
+      // justify-content: center;
+      background: #e3591e;
+
+      .title {
+        font-weight: 500;
+        font-size: 20px;
+        padding: 50px;
+        color: #ffffff;
+      }
+
+      .crosshair_bottom_right {
+        background: rgba(0, 0, 0, 0.16);
+        position: absolute;
+        right: -1px;
+        top: -4px;
+        height: 9px;
+        width: 1px;
+        z-index: 10;
+      }
+
+      .crosshair_bottom_right::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.16);
+        height: 1px;
+        width: 8px;
+        left: -4px;
+        bottom: 5px;
+      }
+
+      .crosshair_bottom_left {
+        background: rgba(0, 0, 0, 0.16);
+        position: absolute;
+        left: -1px;
+        top: -5px;
+        height: 10px;
+        width: 1px;
+        z-index: 10;
+      }
+
+      .crosshair_bottom_left::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.16);
+        height: 1px;
+        width: 8px;
+        left: -4px;
+        bottom: 5px;
+      }
+    }
+
+    .accordion {
+      border: 1px solid #ebebeb;
+      border-top: none;
+      border-bottom: none;
+      position: relative;
+
+      .crosshair_bottom_right {
+        background: rgba(0, 0, 0, 0.16);
+        position: absolute;
+        right: -1px;
+        top: -4px;
+        height: 9px;
+        width: 1px;
+        z-index: 10;
+      }
+
+      .crosshair_bottom_right::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.16);
+        height: 1px;
+        width: 8px;
+        left: -4px;
+        bottom: 5px;
+      }
+
+      .crosshair_bottom_left {
+        background: rgba(0, 0, 0, 0.16);
+        position: absolute;
+        left: -1px;
+        top: -5px;
+        height: 10px;
+        width: 1px;
+        z-index: 10;
+      }
+
+      .crosshair_bottom_left::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.16);
+        height: 1px;
+        width: 8px;
+        left: -4px;
+        bottom: 5px;
+      }
+      .description {
+        font-size: 18px;
+        line-height: 38px;
+        color: #6A6A6A;
+      }
+    }
+
+    .space {
+      background: white;
+      padding: 32px 0;
+      border: 1px solid #ebebeb;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .faq {
+    .container {
+      max-width: 100% !important;
+      padding: 0 10px;
+
+      .text {
+        position: relative;
+        // justify-content: flex-start;
+
+        .title {
+          background: #e3591e;
+          padding: 22px;
+          // padding: rem(108) 0 rem(54) rem(24);
+          
+          // font-weight: 600;
+          // font-size: 24px;
+          // line-height: 24px;
+          color: #ffffff;
+
+          // @media (max-width: 600px) {
+            // padding: rem(68) 0 rem(24) rem(24);
+          // }
+        }
+      }
+
+      .accordion {
+        border-right: 1px solid #ebebeb;
+        border-left: 1px solid #ebebeb;
+
+        // border-top: none;
+        // border-bottom: none;
+        position: relative;
+
+        .summary {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 24px;
+
+          @media (max-width: 600px) {
+            font-size: 15px;
+          }
+        }
+
+        .description {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 26px;
+          color: #6a6a6a;
+        }
+      }
+
+      .space {
+        background: white;
+        padding: 10px 0;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+}

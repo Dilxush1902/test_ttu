@@ -1,0 +1,68 @@
+@import "styles/unit.scss";
+
+.button {
+  padding: rem(16) rem(32);
+  background: #e25b26;
+  font-family: "Poppins" !important;
+  color: #ffffff;
+  font-size: rem(16);
+  line-height: rem(18);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &.drawerWidth {
+    width: 100%;
+  }
+  &.modalBtn {
+    padding: rem(17) !important;
+    width: 90%;
+  }
+  &.disableBtn {
+    cursor: not-allowed;
+    background: red;
+  }
+}
+
+@media (max-width: 600px) {
+  .button {
+    padding: rem(8) rem(16);
+    gap: 8px;
+    transition: all 0.25s ease-in-out;
+    &:active {
+      background: #2d504c;
+    }
+    &.fullWidth {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0 !important;
+    }
+    &.modalBtn {
+      padding: rem(17) !important;
+    }
+
+    &.medium {
+      padding: rem(15) rem(16);
+      font-size: rem(18);
+    }
+    &.mediumLarge {
+      padding: rem(14) rem(36.5);
+      font-size: rem(18);
+    }
+    &.small {
+      padding: rem(13) rem(24);
+      font-size: rem(16);
+    }
+    &.smallWeb {
+      padding: rem(15) rem(38);
+      font-size: rem(16);
+    }
+    &.contractBtn {
+      padding: rem(15) rem(24);
+      font-size: rem(16);
+    }
+  }
+}

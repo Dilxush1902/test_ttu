@@ -1,0 +1,47 @@
+@keyframes flicker {
+  0% {
+    background: #e3591e;
+    opacity: 0.2;
+  }
+  30% {
+    background: #e3591e;
+    opacity: 0.2;
+  }
+  70% {
+    background: transparent;
+    opacity: 0.2;
+  }
+  100% {
+    background: #e3591e;
+    opacity: 0.3;
+  }
+}
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100px);
+  }
+}
+
+@keyframes jumpOut {
+  0% {
+    // top: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    // opacity: 0.1;
+    //
+    // display: none;
+    // top: -1020px;
+    // visibility: hidden;
+    display: none;
+    height: 0;
+    transform: translateY(-100px);
+    opacity: 1;
+    transition: transform, linear;
+  }
+}
